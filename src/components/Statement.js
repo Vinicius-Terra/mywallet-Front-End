@@ -14,7 +14,6 @@ export default function Statement() {
             headers: {Authorization: `Bearer ${token}`}
         });
         promise.then(({data})=> {
-            console.log(data)
             setUserData(data);
         });
     }, [])
@@ -35,7 +34,7 @@ export default function Statement() {
         }
     }
     function showTransactions() {
-        if (userData === null || userData.transactions.length === 0) {
+        if (userData === null || userData === "") {
             return <></>
         } else {
             return (userData.transactions.map((t, index) => 
@@ -46,12 +45,12 @@ export default function Statement() {
         }
     }
     function showBalance() {
-        if (userData === null || userData.transactions.length === 0) {
+        if (userData === null || userData === "") {
             return <></>
         } else {
             let balance = 0
             userData.transactions.forEach(t => {
-                if(t.type === "deposite") {balance += Number(t.value)}
+                if(t.type === "deposit") {balance += Number(t.value)}
                 else {balance -= Number(t.value)}
             });
             return (
@@ -137,7 +136,7 @@ const Value = styled.p`
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    color: ${props =>  props.type === "deposite" ? "#03AC00" : "#C70000"};
+    color: ${props =>  props.type === "deposit" ? "#03AC00" : "#C70000"};
 `;
 
 const Botton = styled.div`
