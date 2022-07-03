@@ -25,7 +25,6 @@ export default function SignUpForm() {
 
 		const promise = axios.post('http://localhost:5000/sign-up', user);
 		promise.then((res) => {
-			localStorage.setItem("token", (res.data));
             //replace true prevents user accidentally coming back to sign in page
 			navigate('/', { replace: true });
 		});
@@ -65,9 +64,9 @@ export default function SignUpForm() {
 					value={confirmPassword}
 					onChange={(e) => setConfirmPassword(e.target.value)}
 				/>
-				<Button type="submit">Entrar</Button>
+				<Button type="submit">Cadastrar</Button>
 			</Forms>
-            <SignupLink to="/cadastro">Primeira vez? Cadastre-se!</SignupLink>
+            <SignupLink to="/">Já tem uma conta? Entre agora!</SignupLink>
 		</Container>
 	);
 }

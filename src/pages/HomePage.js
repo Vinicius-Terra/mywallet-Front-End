@@ -1,20 +1,21 @@
 import styled from 'styled-components';
+import Welcoming from '../components/Welcoming'
+import Statement from '../components/Statement'
+import Options from '../components/Options'
 
-// In reform 
-
-
-export default function DepositPage() {
+export default function HomePage() {
 	return (
 		<Page>
+			<Welcoming />
+			<Statement/>
+			<Options/>
 		</Page>
 	);
 }
 
 const Page = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	min-height: 100vh;
 	width: 100%;
+	padding: 25px 24px 16px 24px;
+	box-sizing: border-box;
 `;

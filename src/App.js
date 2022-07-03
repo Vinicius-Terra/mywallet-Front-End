@@ -4,7 +4,7 @@ import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import HomePage from './pages/HomePage';
 import DepositPage from './pages/DepositPage';
-import WithdrawPage from './pages/WithdrawPage';
+import Withdrawal from './pages/WithdrawalPage';
 
 function App() {
 	return (
@@ -14,7 +14,7 @@ function App() {
 				<Route path="/sign-up" element={<SignUpPage />} />
 				<Route path="/home" element={<HomePage />} />
 				<Route path="/deposit" element={<DepositPage />} />
-				<Route path="/withdraw" element={<WithdrawPage />} />
+				<Route path="/withdrawal" element={<Withdrawal />} />
 			</Routes>
 		</BrowserRouter>
 	);

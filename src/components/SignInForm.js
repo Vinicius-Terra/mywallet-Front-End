@@ -29,7 +29,8 @@ export default function SignInForm() {
 
 		const promise = axios.post('http://localhost:5000/sign-in', user);
 		promise.then((res) => {
-			localStorage.setItem("token", (res.data));
+			localStorage.setItem("token", (res.data.token));
+			localStorage.setItem("name", (res.data.name));
             //replace true prevents user accidentally coming back to sign in page
 			navigate('/home', { replace: true });
 		});
