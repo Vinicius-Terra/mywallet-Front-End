@@ -9,7 +9,7 @@ export default function Statement() {
 
     
     useEffect(() => {
-        const URL = "http://localhost:5000/transactions";
+        const URL = "https://my-wallett.herokuapp.com/transactions";
         const promise = axios.get(URL, {
             headers: {Authorization: `Bearer ${token}`}
         });

@@ -23,7 +23,7 @@ export default function SignUpForm() {
             confirmPassword
 		};
 
-		const promise = axios.post('http://localhost:5000/sign-up', user);
+		const promise = axios.post('https://my-wallett.herokuapp.com/sign-up', user);
 		promise.then((res) => {
             //replace true prevents user accidentally coming back to sign in page
 			navigate('/', { replace: true });

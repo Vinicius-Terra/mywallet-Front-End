@@ -16,7 +16,7 @@ export default function Withdrawal() {
 			description,
 		};
 
-		const promise = axios.post('http://localhost:5000/withdrawal', 
+		const promise = axios.post('https://my-wallett.herokuapp.com/withdrawal', 
         withdrawal, 
         {
             headers: {Authorization: `Bearer ${token}`}
